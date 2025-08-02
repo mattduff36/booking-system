@@ -4,25 +4,33 @@ import Introduction from "@/components/sections/Introduction";
 import { CastleHighlights } from "@/components/sections/CastleHighlights";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { BreadcrumbStructuredData } from '@/components/seo/StructuredData';
+import { getBusinessConfig } from '@/lib/config/business-config';
 
-export const metadata: Metadata = {
-  title: "T&S Bouncy Castle Hire | Professional Party Equipment Rental Edwinstowe",
-  description: "T&S Bouncy Castle Hire provides premium bouncy castle rentals in Edwinstowe, Mansfield, and Nottinghamshire. Fully insured, professionally cleaned, and delivered to your door. Book today!",
-  keywords: "bouncy castle hire Edwinstowe, party equipment rental Nottinghamshire, children's birthday parties, inflatable hire Mansfield, safe bouncy castles, insured castle hire",
-  openGraph: {
-    title: "T&S Bouncy Castle Hire | Professional Party Equipment Rental Edwinstowe",
-    description: "Premium bouncy castle rentals in Edwinstowe and Nottinghamshire. Fully insured, professionally cleaned, and delivered to your door.",
-    url: "https://www.bouncy-castle-hire.com",
-    images: [
-      {
-        url: "/IMG_2360.JPEG",
-        width: 1200,
-        height: 630,
-        alt: "Colorful bouncy castle from T&S Bouncy Castle Hire",
-      },
-    ],
-  },
-};
+// Generate page metadata
+function generatePageMetadata(): Metadata {
+  const config = getBusinessConfig();
+  
+  return {
+    title: config.seo.metaTitle,
+    description: config.seo.metaDescription,
+    keywords: config.seo.keywords,
+    openGraph: {
+      title: config.seo.metaTitle,
+      description: config.seo.metaDescription,
+      url: config.business.website,
+      images: [
+        {
+          url: config.seo.ogImage,
+          width: 1200,
+          height: 630,
+          alt: `${config.business.name} - Professional Service Provider`,
+        },
+      ],
+    },
+  };
+}
+
+export const metadata: Metadata = generatePageMetadata();
 
 export default function Home() {
   return (

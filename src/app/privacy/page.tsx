@@ -1,6 +1,9 @@
 import { Shield, Eye, Lock, FileText } from "lucide-react";
+import { getBusinessConfig } from '@/lib/config/business-config';
 
 const PrivacyPage = () => {
+  const config = getBusinessConfig();
+  
   return (
     <div className="bg-gradient-to-br from-blue-50 to-purple-50 py-6 pt-20 sm:py-12 sm:pt-24 min-h-screen">
       <main className="container mx-auto px-2 sm:px-8">
@@ -153,9 +156,9 @@ const PrivacyPage = () => {
               <div className="space-y-4 text-gray-700">
                 <p>If you have any questions about this privacy policy or how we handle your personal information, please contact us:</p>
                 <div className="bg-white rounded-xl p-4 space-y-2">
-                  <p><strong>Email:</strong> info@bouncy-castle-hire.com</p>
-                  <p><strong>Phone:</strong> 07835 094187</p>
-                  <p><strong>Address:</strong> Edwinstowe, UK</p>
+                  <p><strong>Email:</strong> {config.business.contact.email}</p>
+                  <p><strong>Phone:</strong> {config.business.contact.phone}</p>
+                  <p><strong>Address:</strong> {config.business.contact.address.street}, {config.business.contact.address.city}, {config.business.contact.address.state} {config.business.contact.address.zip}</p>
                 </div>
                 <p className="text-sm">
                   We will respond to your privacy-related inquiries within 30 days.

@@ -1,14 +1,17 @@
 import { MetadataRoute } from 'next'
+import { getBusinessConfig } from '@/lib/config/business-config'
 
 export default function manifest(): MetadataRoute.Manifest {
+  const config = getBusinessConfig();
+  
   return {
-    name: 'T&S Bouncy Castle Hire',
-    short_name: 'T&S Castles',
-    description: 'Professional bouncy castle hire service in Edwinstowe and surrounding areas. Fully insured, safe, and fun inflatables for parties, events, and celebrations.',
+    name: config.business.name,
+    short_name: config.business.shortName,
+    description: config.business.description,
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
-    theme_color: '#37B8D4',
+    theme_color: config.branding.primaryColor,
     icons: [
       {
         src: '/favicon/android-chrome-192x192.png',
@@ -21,7 +24,7 @@ export default function manifest(): MetadataRoute.Manifest {
         type: 'image/png',
       },
     ],
-    categories: ['entertainment', 'lifestyle', 'business'],
-    lang: 'en-GB',
+    categories: ['business', 'services', 'professional'],
+    lang: 'en-US',
   }
 }

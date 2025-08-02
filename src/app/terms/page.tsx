@@ -1,6 +1,9 @@
 import { FileText, AlertTriangle, CheckCircle, Shield } from "lucide-react";
+import { getBusinessConfig } from '@/lib/config/business-config';
 
 const TermsPage = () => {
+  const config = getBusinessConfig();
+  
   return (
     <div className="bg-gradient-to-br from-green-50 to-blue-50 py-6 pt-20 sm:py-12 sm:pt-24 min-h-screen">
       <main className="container mx-auto px-2 sm:px-8">
@@ -32,12 +35,12 @@ const TermsPage = () => {
               </div>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  These terms and conditions ("Terms") govern your use of the T&S Bouncy Castle Hire website and services. 
+                  These terms and conditions ("Terms") govern your use of the {config.business.name} website and services. 
                   By accessing our website or using our services, you agree to be bound by these Terms.
                 </p>
                 <p>
-                  <strong>Company Information:</strong> T&S Bouncy Castle Hire is a family-run business based in Edwinstowe, UK, 
-                  providing bouncy castle hire services for parties and events.
+                  <strong>Company Information:</strong> {config.business.name} is a professional service provider based in {config.business.contact.address.city}, {config.business.contact.address.state}, 
+                  providing {config.services.terminology} for events and special occasions.
                 </p>
               </div>
             </div>
@@ -48,15 +51,15 @@ const TermsPage = () => {
               <div className="space-y-4 text-gray-700">
                 <p>We provide the following services:</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Bouncy castle hire for parties, events, and celebrations</li>
-                  <li>Delivery and setup within a 20-mile radius of Edwinstowe</li>
-                  <li>Collection and dismantling services</li>
-                  <li>Safety instructions and supervision guidance</li>
-                  <li>PIPA tested and insured equipment</li>
+                  <li>Professional {config.services.terminology} for events and special occasions</li>
+                  <li>Delivery and setup within our service area</li>
+                  <li>Professional installation and removal services</li>
+                  <li>Safety instructions and operational guidance</li>
+                  <li>Fully insured and safety-tested {config.services.terminology}</li>
                 </ul>
                 <p className="mt-4">
-                  <strong>Service Area:</strong> We serve Edwinstowe and surrounding areas including Mansfield, Ollerton, and Worksop. 
-                  Free delivery within 10 miles, £5 charge for 10-20 mile radius.
+                  <strong>Service Area:</strong> We serve {config.business.contact.address.city} and {config.business.serviceArea}. 
+                  Contact us for delivery options and pricing in your area.
                 </p>
               </div>
             </div>
@@ -211,9 +214,9 @@ const TermsPage = () => {
               <div className="space-y-4 text-gray-700">
                 <p>If you have any questions about these terms and conditions, please contact us:</p>
                 <div className="bg-white rounded-xl p-4 space-y-2">
-                  <p><strong>Email:</strong> info@bouncy-castle-hire.com</p>
-                  <p><strong>Phone:</strong> 07835 094187</p>
-                  <p><strong>Address:</strong> Edwinstowe, UK</p>
+                  <p><strong>Email:</strong> {config.business.contact.email}</p>
+                  <p><strong>Phone:</strong> {config.business.contact.phone}</p>
+                  <p><strong>Address:</strong> {config.business.contact.address.street}, {config.business.contact.address.city}, {config.business.contact.address.state} {config.business.contact.address.zip}</p>
                 </div>
                 <p className="text-sm">
                   We will respond to your inquiries within 24 hours during business days.

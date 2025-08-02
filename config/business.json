@@ -1,0 +1,57 @@
+{
+  "business": {
+    "name": "Your Business Name",
+    "shortName": "Your Business",
+    "description": "Professional service provider delivering quality solutions for your events and needs",
+    "tagline": "Quality Service, Memorable Events",
+    "industry": "event-services",
+    "contact": {
+      "phone": "+1 (555) 123-4567",
+      "email": "info@yourbusiness.com",
+      "address": {
+        "street": "123 Business Street",
+        "city": "Your City",
+        "state": "Your State",
+        "zip": "12345",
+        "country": "Your Country"
+      }
+    },
+    "serviceArea": "Your Service Area",
+    "website": "https://yourbusiness.com"
+  },
+  "services": {
+    "terminology": "services",
+    "categories": [
+      {
+        "id": "premium",
+        "name": "Premium Services",
+        "description": "Our top-tier service offerings"
+      },
+      {
+        "id": "standard",
+        "name": "Standard Services", 
+        "description": "Quality services for every occasion"
+      }
+    ]
+  },
+  "branding": {
+    "primaryColor": "#0070f3",
+    "secondaryColor": "#ff6b35",
+    "accentColor": "#00d2ff",
+    "logoPath": "/logo.png",
+    "faviconPath": "/favicon.ico"
+  },
+  "seo": {
+    "metaTitle": "Your Business Name | Professional Service Provider",
+    "metaDescription": "Professional service provider delivering quality solutions. Fully insured, reliable, and committed to making your events unforgettable.",
+    "keywords": "professional services, event services, quality provider, reliable service",
+    "ogImage": "/og-image.jpg"
+  },
+  "features": {
+    "bookingSystem": true,
+    "onlinePayments": true,
+    "calendarIntegration": true,
+    "emailNotifications": true,
+    "adminPanel": true
+  }
+}

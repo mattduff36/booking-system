@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "name": "Initial Consultation",
+    "category": "consultations",
+    "size": "60 minutes",
+    "price": 125,
+    "description": "Comprehensive initial consultation to understand your needs and develop a customized solution plan. Includes detailed assessment, recommendations, and follow-up action items.",
+    "imageUrl": "/consultation.jpg",
+    "features": [
+      "Detailed assessment",
+      "Custom recommendations",
+      "Action plan included",
+      "Follow-up support"
+    ],
+    "availability": "Monday-Friday, 9AM-5PM",
+    "duration": "60 minutes"
+  },
+  {
+    "id": 2,
+    "name": "Follow-up Session",
+    "category": "appointments",
+    "size": "30 minutes",
+    "price": 75, 
+    "description": "Progress review and strategy adjustment session. Evaluate current status, address any concerns, and make necessary modifications to your plan for optimal results.",
+    "imageUrl": "/followup.jpg",
+    "features": [
+      "Progress review",
+      "Strategy adjustment",
+      "Concern resolution",
+      "Plan optimization"
+    ],
+    "availability": "Flexible scheduling",
+    "duration": "30 minutes"
+  },
+  {
+    "id": 3,
+    "name": "Expert Advisory",
+    "category": "consultations",
+    "size": "90 minutes",
+    "price": 200,
+    "description": "In-depth expert advisory session for complex challenges. Comprehensive analysis, strategic planning, and implementation guidance with detailed documentation and resources.",
+    "imageUrl": "/advisory.jpg",
+    "features": [
+      "Expert analysis",
+      "Strategic planning",
+      "Implementation guide",
+      "Detailed documentation"
+    ],
+    "availability": "By appointment only",
+    "duration": "90 minutes"
+  }
+]

@@ -1,0 +1,120 @@
+{
+  "presets": {
+    "event-services": {
+      "business": {
+        "name": "Premier Event Services",
+        "shortName": "Premier Events",
+        "description": "Professional event equipment rental and party services delivering memorable experiences",
+        "tagline": "Making Your Events Unforgettable"
+      },
+      "services": {
+        "terminology": "equipment",
+        "pageTitle": "Our Equipment Fleet",
+        "categories": [
+          {
+            "id": "bounce-houses",
+            "name": "Bounce Houses",
+            "description": "Safe and fun inflatable bounce houses for all ages"
+          },
+          {
+            "id": "party-equipment",
+            "name": "Party Equipment", 
+            "description": "Complete party equipment for memorable celebrations"
+          }
+        ]
+      },
+      "seo": {
+        "metaTitle": "Premier Event Services | Professional Party Equipment Rental",
+        "metaDescription": "Premier event equipment rental service. Fully insured bounce houses and party equipment delivered to your door. Book today!",
+        "keywords": "event services, party equipment rental, bounce house rental, inflatable rentals"
+      }
+    },
+    "equipment-rental": {
+      "business": {
+        "name": "Pro Equipment Rentals",
+        "shortName": "Pro Rentals",
+        "description": "Professional equipment rental service for construction, events, and industrial needs",
+        "tagline": "Professional Tools, Professional Results"
+      },
+      "services": {
+        "terminology": "equipment",
+        "pageTitle": "Equipment Inventory",
+        "categories": [
+          {
+            "id": "construction",
+            "name": "Construction Equipment",
+            "description": "Heavy-duty construction tools and machinery"
+          },
+          {
+            "id": "power-tools",
+            "name": "Power Tools",
+            "description": "Professional grade power tools and equipment"
+          }
+        ]
+      },
+      "seo": {
+        "metaTitle": "Pro Equipment Rentals | Professional Tool & Equipment Rental",
+        "metaDescription": "Professional equipment rental service. Quality tools and machinery for construction, events, and industrial projects.",
+        "keywords": "equipment rental, tool rental, construction equipment, professional tools"
+      }
+    },
+    "appointment-booking": {
+      "business": {
+        "name": "Professional Services",
+        "shortName": "Pro Services",
+        "description": "Expert consultation and professional services tailored to your needs",
+        "tagline": "Expert Service, Personal Attention"
+      },
+      "services": {
+        "terminology": "services",
+        "pageTitle": "Our Services",
+        "categories": [
+          {
+            "id": "consultations",
+            "name": "Consultations",
+            "description": "Expert consultation services"
+          },
+          {
+            "id": "appointments",
+            "name": "Appointments",
+            "description": "Scheduled service appointments"
+          }
+        ]
+      },
+      "seo": {
+        "metaTitle": "Professional Services | Expert Consultation & Service Appointments",
+        "metaDescription": "Professional consultation and service appointments. Expert advice and personalized service delivery.",
+        "keywords": "professional services, consultation, appointments, expert advice"
+      }
+    },
+    "venue-booking": {
+      "business": {
+        "name": "Premier Venues",
+        "shortName": "Premier Venues",
+        "description": "Beautiful venue spaces for weddings, corporate events, and special occasions",
+        "tagline": "Perfect Spaces, Perfect Moments"
+      },
+      "services": {
+        "terminology": "venues",
+        "pageTitle": "Available Venues",
+        "categories": [
+          {
+            "id": "wedding-venues",
+            "name": "Wedding Venues",
+            "description": "Elegant spaces for your special day"
+          },
+          {
+            "id": "corporate-venues",
+            "name": "Corporate Venues",
+            "description": "Professional spaces for business events"
+          }
+        ]
+      },
+      "seo": {
+        "metaTitle": "Premier Venues | Beautiful Event Spaces & Venue Rental",
+        "metaDescription": "Beautiful venue spaces for weddings, corporate events, and special occasions. Professional service and stunning locations.",
+        "keywords": "venue rental, event spaces, wedding venues, corporate venues"
+      }
+    }
+  }
+}

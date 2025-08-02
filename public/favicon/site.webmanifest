@@ -1,6 +1,6 @@
 {
-  "name": "T&S Bouncy Castle Hire",
-  "short_name": "T&S Bouncy Castle",
+  "name": "Your Business Name",
+  "short_name": "Your Business",
   "icons": [
     {
       "src": "/favicon/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#37B8D4",
+  "theme_color": "#0070f3",
   "background_color": "#ffffff",
   "display": "standalone"
 }

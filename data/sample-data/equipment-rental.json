@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "name": "Professional Power Drill",
+    "category": "power-tools",
+    "size": "Heavy-duty",
+    "price": 25,
+    "description": "High-performance professional power drill perfect for construction and renovation projects. Features variable speed control, LED light, and extended battery life. Includes chuck key and carrying case.",
+    "imageUrl": "/drill.jpg",
+    "features": [
+      "Variable speed control",
+      "LED work light",
+      "Extended battery",
+      "Professional grade"
+    ],
+    "availability": "Available daily",
+    "duration": "Daily rental"
+  },
+  {
+    "id": 2,
+    "name": "Excavator - Mini",
+    "category": "construction",
+    "size": "3-ton capacity",
+    "price": 350,
+    "description": "Compact mini excavator ideal for small to medium construction projects, landscaping, and utility work. Easy to operate with excellent maneuverability in tight spaces. Operator training available.",
+    "imageUrl": "/excavator.jpg", 
+    "features": [
+      "Easy operation",
+      "Compact design",
+      "Fuel efficient",
+      "Training included"
+    ],
+    "availability": "Advanced booking required",
+    "duration": "Daily/weekly rental"
+  },
+  {
+    "id": 3,
+    "name": "Generator - Industrial",
+    "category": "power-tools",
+    "size": "10kW output",
+    "price": 85,
+    "description": "Reliable industrial generator providing clean, stable power for events, construction sites, and emergency backup. Quiet operation with automatic voltage regulation and fuel gauge.",
+    "imageUrl": "/generator.jpg",
+    "features": [
+      "Clean power output",
+      "Quiet operation", 
+      "Fuel efficient",
+      "Reliable performance"
+    ],
+    "availability": "Available on request",
+    "duration": "Daily/weekly rental"
+  }
+]

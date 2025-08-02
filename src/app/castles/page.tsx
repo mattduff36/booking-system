@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: "https://www.bouncy-castle-hire.com/castles",
     images: [
       {
-        url: "/IMG_2360.JPEG",
+        url: "/placeholder-service-1.jpg",
         width: 1200,
         height: 630,
         alt: "T&S Bouncy Castle Fleet",

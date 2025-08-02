@@ -1,17 +1,20 @@
 import Link from "next/link";
 import { Heart, Facebook } from "lucide-react";
+import { getBusinessConfig } from '@/lib/config/business-config';
 
 const Footer = () => {
+  const config = getBusinessConfig();
+  
   return (
     <footer className="bg-gray-50 text-gray-600 border-t border-gray-200">
       <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="mb-4">
             <p className="text-lg font-semibold text-gray-800">
-              T&S Bouncy Castle Hire
+              {config.business.name}
             </p>
             <p className="text-sm text-gray-600">
-              Making parties unforgettable since 2024
+              {config.business.tagline}
             </p>
           </div>
           

@@ -35,7 +35,7 @@ const HealthAndSafetyPage = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-16 h-[320px] flex items-center justify-center">
             <div className="absolute inset-0">
               <Image
-                src="/IMG_2360.JPEG"
+                src="/placeholder-service-1.jpg"
                 alt="Safe and fun bouncy castles"
                 fill
                 className="object-cover opacity-60"

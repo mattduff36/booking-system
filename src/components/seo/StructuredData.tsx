@@ -1,3 +1,5 @@
+import { getBusinessConfig } from '@/lib/config/business-config';
+
 interface StructuredDataProps {
   type: 'LocalBusiness' | 'Product' | 'Service' | 'BreadcrumbList';
   data: any;
@@ -20,32 +22,34 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
 
 // Local Business structured data for the main site
 export function LocalBusinessStructuredData() {
+  const config = getBusinessConfig();
+  
   const localBusinessData = {
-    name: 'T&S Bouncy Castle Hire',
-    description: 'Professional bouncy castle hire service in Edwinstowe and surrounding areas. Fully insured, safe, and fun inflatables for parties, events, and celebrations.',
+    name: config.business.name,
+    description: config.business.description,
     '@type': 'LocalBusiness',
     '@context': 'https://schema.org',
-    url: 'https://www.bouncy-castle-hire.com',
-    logo: 'https://www.bouncy-castle-hire.com/favicon/android-chrome-512x512.png',
+    url: config.business.website,
+    logo: `${config.business.website}${config.branding.logoPath}`,
     image: [
-      'https://www.bouncy-castle-hire.com/IMG_2360.JPEG',
-      'https://www.bouncy-castle-hire.com/IMG_2361.JPEG',
-      'https://www.bouncy-castle-hire.com/IMG_2362.JPEG'
+      `${config.business.website}${config.seo.ogImage}`,
+      `${config.business.website}/service-image-1.jpg`,
+      `${config.business.website}/service-image-2.jpg`
     ],
-    telephone: '+44-7835-094187',
-    email: 'info@bouncy-castle-hire.com',
+    telephone: config.business.contact.phone,
+    email: config.business.contact.email,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '85 Sixth Ave',
-      addressLocality: 'Edwinstowe',
-      addressRegion: 'Mansfield',
-      postalCode: 'NG21 9PW',
-      addressCountry: 'GB'
+      streetAddress: config.business.contact.address.street,
+      addressLocality: config.business.contact.address.city,
+      addressRegion: config.business.contact.address.state,
+      postalCode: config.business.contact.address.zip,
+      addressCountry: config.business.contact.address.country
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 53.2004, // Approximate coordinates for Edwinstowe
-      longitude: -1.0681
+      latitude: 40.7128, // Default coordinates - to be configured per business
+      longitude: -74.0060
     },
     openingHours: [
       'Mo-Fr 09:00-18:00',
@@ -55,69 +59,30 @@ export function LocalBusinessStructuredData() {
     areaServed: [
       {
         '@type': 'City',
-        name: 'Edwinstowe'
-      },
-      {
-        '@type': 'City', 
-        name: 'Mansfield'
-      },
-      {
-        '@type': 'City',
-        name: 'Newark'
-      },
-      {
-        '@type': 'City',
-        name: 'Worksop'
-      },
-      {
-        '@type': 'City',
-        name: 'Ollerton'
-      },
-      {
-        '@type': 'City',
-        name: 'Nottingham'
-      },
-      {
-        '@type': 'City',
-        name: 'Bilsthorpe'
+        name: config.business.contact.address.city
       },
       {
         '@type': 'State',
-        name: 'Nottinghamshire'
+        name: config.business.contact.address.state
       }
     ],
-    serviceType: 'Bouncy Castle Hire',
-    priceRange: '££',
+    serviceType: config.services.terminology === 'equipment' ? 'Equipment Rental' : 
+                 config.services.terminology === 'venues' ? 'Venue Rental' : 'Professional Services',
+    priceRange: '$$',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Bouncy Castle Hire Services',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Children\'s Bouncy Castle Hire',
-            description: 'Safe and fun bouncy castles perfect for children\'s parties and events'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Adult Bouncy Castle Hire',
-            description: 'Sturdy bouncy castles suitable for adult parties and corporate events'
-          }
-        },
-        {
-          '@type': 'Service',
-          name: 'Event Equipment Hire',
-          description: 'Complete party equipment hire including bouncy castles and inflatables'
+      name: `${config.business.name} Services`,
+      itemListElement: config.services.categories.map(category => ({
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service', 
+          name: category.name,
+          description: category.description
         }
-      ]
+      }))
     },
     sameAs: [
-      'https://www.facebook.com/profile.php?id=61577881314560'
-      // Instagram coming soon
+      // Social media links to be configured per business
     ]
   };
 

@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Service",
+    "category": "premium",
+    "size": "Large",
+    "price": 150,
+    "description": "Our premium service offering provides exceptional quality and attention to detail. Perfect for special occasions and important events. Fully insured and professionally managed to exceed your expectations.",
+    "imageUrl": "/placeholder-service-1.jpg",
+    "features": [
+      "Professional quality",
+      "Fully insured",
+      "Expert delivery",
+      "Premium materials"
+    ],
+    "availability": "Available year-round",
+    "duration": "Full day service"
+  },
+  {
+    "id": 2,
+    "name": "Standard Service",
+    "category": "standard", 
+    "size": "Medium",
+    "price": 100,
+    "description": "Our reliable standard service provides excellent value without compromising on quality. Ideal for regular events and gatherings. Professionally delivered and maintained to ensure satisfaction.",
+    "imageUrl": "/placeholder-service-2.jpg",
+    "features": [
+      "Quality assured",
+      "Reliable delivery",
+      "Professional setup",
+      "Competitive pricing"
+    ],
+    "availability": "Available weekdays and weekends",
+    "duration": "Half or full day"
+  },
+  {
+    "id": 3,
+    "name": "Basic Service",
+    "category": "standard",
+    "size": "Small", 
+    "price": 75,
+    "description": "Our essential service option provides great value for smaller events and occasions. Quality service with professional standards at an affordable price point.",
+    "imageUrl": "/placeholder-service-3.jpg",
+    "features": [
+      "Affordable pricing",
+      "Professional service",
+      "Quality materials",
+      "Flexible scheduling"
+    ],
+    "availability": "Available on request",
+    "duration": "Half day service"
+  }
+]

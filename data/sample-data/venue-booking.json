@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "name": "Grand Ballroom",
+    "category": "wedding-venues", 
+    "size": "Accommodates 200 guests",
+    "price": 2500,
+    "description": "Elegant grand ballroom featuring crystal chandeliers, hardwood floors, and panoramic windows. Perfect for weddings, galas, and formal events. Includes tables, chairs, and basic lighting.",
+    "imageUrl": "/ballroom.jpg",
+    "features": [
+      "Crystal chandeliers",
+      "Hardwood floors",
+      "Panoramic windows",
+      "Full catering kitchen"
+    ],
+    "availability": "Weekends available",
+    "duration": "8-hour event"
+  },
+  {
+    "id": 2,
+    "name": "Conference Center",
+    "category": "corporate-venues",
+    "size": "Seats 50-100 people",
+    "price": 800,
+    "description": "Modern conference center with state-of-the-art AV equipment, high-speed internet, and flexible seating arrangements. Ideal for corporate meetings, training sessions, and seminars.",
+    "imageUrl": "/conference.jpg",
+    "features": [
+      "AV equipment included",
+      "High-speed internet",
+      "Flexible seating",
+      "Climate controlled"
+    ],
+    "availability": "Monday-Friday",
+    "duration": "Full day rental"
+  },
+  {
+    "id": 3,
+    "name": "Garden Pavilion",
+    "category": "wedding-venues",
+    "size": "Outdoor space for 150 guests", 
+    "price": 1800,
+    "description": "Beautiful outdoor pavilion surrounded by landscaped gardens. Features covered dining area, dance floor, and scenic views. Perfect for outdoor weddings and garden parties.",
+    "imageUrl": "/pavilion.jpg",
+    "features": [
+      "Covered dining area",
+      "Dance floor included",
+      "Scenic garden views", 
+      "Weather protection"
+    ],
+    "availability": "Seasonal availability",
+    "duration": "Full day event"
+  }
+]

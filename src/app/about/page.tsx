@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://www.bouncy-castle-hire.com/about",
     images: [
       {
-        url: "/IMG_2362.JPEG",
+        url: "/placeholder-service-3.jpg",
         width: 1200,
         height: 630,
         alt: "T&S Bouncy Castle Hire Team",
@@ -53,7 +53,7 @@ const AboutPage = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl mb-16 h-[320px] flex items-center justify-center">
             <div className="absolute inset-0">
               <Image
-                src="/IMG_2362.JPEG"
+                src="/placeholder-service-3.jpg"
                 alt="Fun bouncy castles"
                 fill
                 className="object-cover"

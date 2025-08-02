@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "name": "Large Party Castle",
+    "category": "bounce-houses",
+    "size": "15ft x 15ft",
+    "price": 120,
+    "description": "Perfect for bigger celebrations and larger groups! This spacious bounce house features vibrant colors and premium safety features. Fully insured, safety tested, and guaranteed to be the highlight of your party!",
+    "imageUrl": "/bounce-house-1.jpg",
+    "features": [
+      "Safety tested",
+      "Fully insured", 
+      "Professional setup",
+      "All-day rental"
+    ],
+    "availability": "Available weekends",
+    "duration": "8-hour rental"
+  },
+  {
+    "id": 2,
+    "name": "Kids Fun Castle",
+    "category": "bounce-houses",
+    "size": "12ft x 12ft", 
+    "price": 85,
+    "description": "Designed specifically for younger children with lower walls and gentler bouncing. Features fun themes and bright colors that kids absolutely love. Safe, clean, and professionally maintained.",
+    "imageUrl": "/bounce-house-2.jpg",
+    "features": [
+      "Child-safe design",
+      "Colorful themes",
+      "Professional cleaning",
+      "Safety certified"
+    ],
+    "availability": "Available daily",  
+    "duration": "6-hour rental"
+  },
+  {
+    "id": 3,
+    "name": "Party Equipment Package",
+    "category": "party-equipment",
+    "size": "Complete package",
+    "price": 200,
+    "description": "Everything you need for the perfect party! Includes tables, chairs, decorations, and entertainment equipment. Professional setup and takedown included in the price.",
+    "imageUrl": "/party-package.jpg",
+    "features": [
+      "Complete package",
+      "Professional setup",
+      "Quality equipment",
+      "Full-service experience"
+    ],
+    "availability": "Advanced booking required",
+    "duration": "Full event coverage"
+  }
+]

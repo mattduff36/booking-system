@@ -11,14 +11,14 @@ import { Bubblegum_Sans } from "next/font/google";
 
 const bubblegumSans = Bubblegum_Sans({ subsets: ["latin"], weight: ["400"] });
 
-const images = [
-  "/IMG_2360.JPEG",
-  "/IMG_2361.JPEG",
-  "/IMG_2362.JPEG",
-];
-
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const images = [
+    "/placeholder-hero-1.jpg",
+    "/placeholder-hero-2.jpg", 
+    "/placeholder-hero-3.jpg",
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,9 +32,9 @@ const Hero = () => {
     <section className="relative h-[80vh] w-full flex items-center justify-center text-white">
       {images.map((src, index) => {
         const altTexts = [
-          "Colorful bouncy castle with children playing at T&S Bouncy Castle Hire party",
-          "Large inflatable bouncy castle setup in garden for birthday party in Edwinstowe",
-          "Safe and fun bouncy castle rental from T&S Bouncy Castle Hire Nottinghamshire"
+          "Professional service provider delivering quality solutions for your events",
+          "Quality service setup and delivery for special occasions",
+          "Reliable service provider offering professional solutions"
         ];
         
         return (
@@ -80,8 +80,8 @@ const Hero = () => {
             }}
           >
             <Image
-              src="/tands_logo.png"
-              alt="T&S Bouncy Castle Hire Logo"
+              src="/logo.png"
+              alt="Your Business Logo"
               width={240}
               height={64}
               priority

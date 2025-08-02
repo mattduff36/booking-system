@@ -7,93 +7,90 @@ import QueryProvider from '@/components/providers/QueryProvider';
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from '@vercel/analytics/react';
 import { LocalBusinessStructuredData } from '@/components/seo/StructuredData';
+import { getBusinessConfig } from '@/lib/config/business-config';
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://www.bouncy-castle-hire.com'),
-  title: {
-    default: "T&S Bouncy Castle Hire | Fun & Safe Castle Hire in Edwinstowe",
-    template: "%s | T&S Bouncy Castle Hire"
-  },
-  description: "Professional bouncy castle hire service in Edwinstowe and surrounding areas. Fully insured, safe, and fun inflatables for parties, events, and celebrations. Serving Nottinghamshire since 2024.",
-  keywords: [
-    "bouncy castle hire Edwinstowe",
-    "bouncy castle rental Nottinghamshire", 
-    "inflatable hire Mansfield",
-    "party rentals Newark",
-    "children's entertainment Worksop",
-    "safe bouncy castles",
-    "insured bouncy castle hire",
-    "birthday party equipment",
-    "event hire Sherwood Forest",
-    "local bouncy castle company"
-  ].join(", "),
-  authors: [{ name: "T&S Bouncy Castle Hire" }],
-  creator: "T&S Bouncy Castle Hire",
-  publisher: "T&S Bouncy Castle Hire",
-  category: "Entertainment Services",
-  classification: "Local Business - Party Equipment Rental",
-  openGraph: {
-    title: "T&S Bouncy Castle Hire | Fun & Safe Castle Hire in Edwinstowe",
-    description: "Professional bouncy castle hire service in Edwinstowe and surrounding areas. Fully insured, safe, and fun inflatables for parties, events, and celebrations.",
-    url: "https://www.bouncy-castle-hire.com",
-    siteName: "T&S Bouncy Castle Hire",
-    images: [
-      {
-        url: "/IMG_2360.JPEG",
-        width: 1200,
-        height: 630,
-        alt: "T&S Bouncy Castle Hire - Colorful bouncy castle at party",
-      },
-      {
-        url: "/favicon/android-chrome-512x512.png",
-        width: 512,
-        height: 512,
-        alt: "T&S Bouncy Castle Hire Logo",
-      },
-    ],
-    locale: "en_GB",
-    type: "website",
-    countryName: "United Kingdom",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "T&S Bouncy Castle Hire | Fun & Safe Castle Hire in Edwinstowe",
-    description: "Professional bouncy castle hire service in Edwinstowe and surrounding areas. Fully insured, safe, and fun inflatables for parties, events, and celebrations.",
-    images: ["/IMG_2360.JPEG"],
-    creator: "@tandscastles", // Replace with actual Twitter handle when available
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+// Generate metadata using business configuration
+function generateMetadata(): Metadata {
+  const config = getBusinessConfig();
+  
+  return {
+    metadataBase: new URL(config.business.website || 'https://yourbusiness.com'),
+    title: {
+      default: config.seo.metaTitle,
+      template: `%s | ${config.business.shortName}`
+    },
+    description: config.seo.metaDescription,
+    keywords: config.seo.keywords,
+    authors: [{ name: config.business.name }],
+    creator: config.business.name,
+    publisher: config.business.name,
+    category: "Professional Services",
+    classification: "Local Business - Service Provider",
+    openGraph: {
+      title: config.seo.metaTitle,
+      description: config.seo.metaDescription,
+      url: config.business.website,
+      siteName: config.business.name,
+      images: [
+        {
+          url: config.seo.ogImage,
+          width: 1200,
+          height: 630,
+          alt: `${config.business.name} - Professional Service Provider`,
+        },
+        {
+          url: config.branding.logoPath,
+          width: 512,
+          height: 512,
+          alt: `${config.business.name} Logo`,
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+      countryName: "United States",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: config.seo.metaTitle,
+      description: config.seo.metaDescription,
+      images: [config.seo.ogImage],
+      creator: `@${config.business.shortName.toLowerCase().replace(/\s+/g, '')}`,
+    },
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
-  },
-  // verification: {
-  //   google: "your-google-verification-code", // Will be added after Google Search Console setup
-  //   // yandex: "your-yandex-verification-code",
-  //   // bing: "your-bing-verification-code",
-  // },
-  icons: {
-    icon: [
-      { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
-    other: [
-      { rel: 'icon', url: '/favicon/favicon.ico' },
-    ],
-  },
-  manifest: '/favicon/site.webmanifest',
-};
+    // verification: {
+    //   google: "your-google-verification-code", // Will be added after Google Search Console setup
+    //   // yandex: "your-yandex-verification-code",
+    //   // bing: "your-bing-verification-code",
+    // },
+    icons: {
+      icon: [
+        { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+        { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      ],
+      apple: [
+        { url: '/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      ],
+      other: [
+        { rel: 'icon', url: '/favicon/favicon.ico' },
+      ],
+    },
+    manifest: '/favicon/site.webmanifest',
+  };
+}
+
+export const metadata: Metadata = generateMetadata();
 
 export const viewport: Viewport = {
   width: 'device-width',

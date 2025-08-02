@@ -226,7 +226,7 @@ export async function initializeDatabase() {
           size: "11ft x 15ft",
           price: 80,
           description: "Emoji is the perfect addition to any celebration! This fun-themed bouncy castle (11ft x 15ft) combines safety, fun, and excitement. At just £80.00 per day, it's an affordable way to make your event unforgettable. Fully insured, PIPA tested, and guaranteed to be the highlight of your party! Keep overnight for only an extra £20!",
-          image_url: "/IMG_2360.JPEG",
+          image_url: "/placeholder-service-1.jpg",
         },
         {
           name: "Party",
@@ -234,7 +234,7 @@ export async function initializeDatabase() {
           size: "11ft x 15ft",
           price: 80,
           description: "A timeless classic that never goes out of style! This 11ft x 15ft bouncy castle is great for bigger celebrations and larger groups - our premium option with extra special features. Fully cleaned, safety tested, and guaranteed to bring smiles to faces of all ages! Keep overnight for only an extra £20!",
-          image_url: "/IMG_2361.JPEG",
+          image_url: "/placeholder-service-2.jpg",
         },
         {
           name: "Disco",
@@ -242,7 +242,7 @@ export async function initializeDatabase() {
           size: "15ft x 15ft",
           price: 120,
           description: "Features bright, colorful designs! This 15ft x 15ft bouncy castle is great for bigger celebrations and larger groups - our premium option with extra special features. Fully cleaned, safety tested, and guaranteed to bring smiles to faces of all ages! Keep overnight for only an extra £20!",
-          image_url: "/IMG_2362.JPEG",
+          image_url: "/placeholder-service-3.jpg",
         },
       ];
       

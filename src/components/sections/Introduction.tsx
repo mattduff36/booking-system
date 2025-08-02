@@ -1,33 +1,36 @@
 import { Phone, Mail, Award, Smile, ShieldCheck } from "lucide-react";
+import { getBusinessConfig } from '@/lib/config/business-config';
 
 const features = [
   {
-    name: "Fun For All Ages",
-    description: "Our bouncy castles are a guaranteed hit for kids and adults alike, providing hours of entertainment.",
+    name: "Professional Quality",
+    description: "Our services are designed to exceed expectations, providing reliable solutions for all your needs.",
     icon: Smile,
   },
   {
-    name: "Safety First",
-    description: "All our castles are PIPA tested and we are fully insured, so you can have peace of mind.",
+    name: "Safety & Security",
+    description: "All our services are fully insured and comply with industry standards for your peace of mind.",
     icon: ShieldCheck,
   },
   {
     name: "Excellent Service",
-    description: "We pride ourselves on friendly, reliable service, from booking to setup and collection.",
+    description: "We pride ourselves on friendly, reliable service, from initial contact to project completion.",
     icon: Award,
   },
 ];
 
 const Introduction = () => {
+  const config = getBusinessConfig();
+  
   return (
     <section className="container mx-auto my-12 rounded-3xl border-4 border-pink-300 bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-100 p-8 shadow-2xl backdrop-blur-sm transform hover:scale-105 transition-all duration-300">
       {/* Title spanning full width */}
       <div className="text-center mb-8">
         <h2 className="mb-4 text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent animate-pulse">
-          🎉 Welcome to T&S Bouncy Castle Hire 🎉
+          🎉 Welcome to {config.business.name} 🎉
         </h2>
         <p className="mt-2 text-3xl md:text-4xl font-bold tracking-tight text-gray-800 drop-shadow-lg">
-          Making Your Events Unforgettable
+          {config.business.tagline}
         </p>
       </div>
 
@@ -37,7 +40,7 @@ const Introduction = () => {
           <div className="mb-8">
             <div className="text-lg leading-8 text-gray-700 bg-white/60 rounded-2xl p-4 shadow-lg border-2 border-yellow-300">
               <p className="font-semibold">
-                We are a family-run business based in Edwinstowe, dedicated to bringing joy and laughter to your parties and events with our top-quality, clean, and safe bouncy castles.
+                {config.business.description}
               </p>
             </div>
           </div>
@@ -66,22 +69,22 @@ const Introduction = () => {
         <div className="lg:col-span-1 flex flex-col">
           <div className="bg-gradient-to-r from-yellow-200 via-pink-200 to-purple-200 rounded-3xl p-6 shadow-xl border-4 border-rainbow-300 mt-8 lg:mt-0">
             <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-2 text-center">
-              🎈 Ready to get bouncing? 🎈
+              🎈 Ready to get started? 🎈
             </h3>
             <p className="mt-3 text-lg text-gray-700 font-semibold text-center">
-              Contact us today to book your castle!
+              Contact us today to discuss your needs!
             </p>
             <div className="mt-6 flex flex-col gap-4">
               <div className="flex items-center gap-3 bg-white/80 rounded-2xl p-3 shadow-lg border-2 border-blue-300 hover:bg-blue-50 transition-all duration-300">
                 <Phone className="h-6 w-6 text-blue-600 animate-pulse flex-shrink-0" />
-                <a href="tel:07835094187" className="text-lg font-bold text-blue-600 hover:text-blue-800">
-                  <span className="sr-only">Call us at 07835 094187</span>
-                  07835 094187
+                <a href={`tel:${config.business.contact.phone}`} className="text-lg font-bold text-blue-600 hover:text-blue-800">
+                  <span className="sr-only">Call us at {config.business.contact.phone}</span>
+                  {config.business.contact.phone}
                 </a>
               </div>
-              <a href="mailto:info@bouncy-castle-hire.com" className="flex items-center gap-3 text-xs sm:text-lg font-bold text-purple-600 hover:text-purple-800 bg-white/80 rounded-2xl p-3 shadow-lg border-2 border-purple-300 hover:bg-white/90 transition-all duration-300 group">
+              <a href={`mailto:${config.business.contact.email}`} className="flex items-center gap-3 text-xs sm:text-lg font-bold text-purple-600 hover:text-purple-800 bg-white/80 rounded-2xl p-3 shadow-lg border-2 border-purple-300 hover:bg-white/90 transition-all duration-300 group">
                 <Mail className="h-6 w-6 animate-pulse flex-shrink-0" />
-                <span className="break-all max-w-full">info@bouncy-castle-hire.com</span>
+                <span className="break-all max-w-full">{config.business.contact.email}</span>
               </a>
             </div>
           </div>
