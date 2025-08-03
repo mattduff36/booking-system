@@ -1,3 +1,5 @@
+"use client";
+
 import { Phone, Mail, Award, Smile, ShieldCheck } from "lucide-react";
 import { useBusinessConfig } from '@/hooks/useBusinessConfig';
 

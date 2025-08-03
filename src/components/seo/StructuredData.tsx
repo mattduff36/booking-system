@@ -1,4 +1,6 @@
-import { getBusinessConfig } from '@/lib/config/business-config';
+"use client";
+
+import { useBusinessConfig } from '@/hooks/useBusinessConfig';
 
 interface StructuredDataProps {
   type: 'LocalBusiness' | 'Product' | 'Service' | 'BreadcrumbList';
@@ -22,7 +24,11 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
 
 // Local Business structured data for the main site
 export function LocalBusinessStructuredData() {
-  const config = getBusinessConfig();
+  const { config, loading } = useBusinessConfig();
+  
+  if (loading) {
+    return null;
+  }
   
   const localBusinessData = {
     name: config.business.name,

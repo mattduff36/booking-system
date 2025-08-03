@@ -11,8 +11,8 @@ import { getBusinessConfig } from '@/lib/config/business-config';
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
-// Generate metadata using business configuration
-function generateMetadata(): Metadata {
+// Generate dynamic metadata using business configuration
+export async function generateMetadata(): Promise<Metadata> {
   const config = getBusinessConfig();
   
   return {
@@ -90,7 +90,7 @@ function generateMetadata(): Metadata {
   };
 }
 
-export const metadata: Metadata = generateMetadata();
+// Metadata is now generated dynamically via generateMetadata function
 
 export const viewport: Viewport = {
   width: 'device-width',

@@ -6,8 +6,8 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { BreadcrumbStructuredData } from '@/components/seo/StructuredData';
 import { getBusinessConfig } from '@/lib/config/business-config';
 
-// Generate page metadata
-function generatePageMetadata(): Metadata {
+// Generate dynamic metadata
+export async function generateMetadata(): Promise<Metadata> {
   const config = getBusinessConfig();
   
   return {
@@ -29,8 +29,6 @@ function generatePageMetadata(): Metadata {
     },
   };
 }
-
-export const metadata: Metadata = generatePageMetadata();
 
 export default function Home() {
   return (

@@ -73,7 +73,14 @@ export class GoogleCalendarService {
     const projectId = process.env.GOOGLE_PROJECT_ID;
 
     if (!serviceAccountEmail || !privateKey || !projectId) {
-      throw new Error('Missing Google service account credentials in environment variables');
+      // During build time or when credentials are missing, create a placeholder JWT
+      // The actual error will be thrown when attempting to use the service
+      console.warn('Google Calendar credentials not found. Service will be disabled.');
+      return new JWT({
+        email: 'placeholder@example.com',
+        key: 'placeholder-key',
+        scopes: []
+      });
     }
 
     return new JWT({
@@ -98,6 +105,13 @@ export class GoogleCalendarService {
     };
   }
 
+  // Check if service is properly initialized with real credentials
+  private checkCredentials(): void {
+    if (this.auth.email === 'placeholder@example.com') {
+      throw new Error('Google Calendar service is not available. Please configure GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY, and GOOGLE_PROJECT_ID environment variables.');
+    }
+  }
+
   // Private helper method for API calls with retry logic
   private async executeWithRetry<T>(
     operation: () => Promise<T>,
@@ -120,6 +134,7 @@ export class GoogleCalendarService {
   // Event Creation and Management
 
   async createBookingEvent(bookingData: BookingEventData): Promise<string> {
+    this.checkCredentials();
     try {
       console.log('=== GOOGLE CALENDAR SERVICE: createBookingEvent CALLED ===');
       console.log('Timestamp:', new Date().toISOString());
@@ -152,6 +167,7 @@ export class GoogleCalendarService {
   }
 
   async updateBookingEvent(eventId: string, bookingData: BookingEventData): Promise<void> {
+    this.checkCredentials();
     try {
       const event: calendar_v3.Schema$Event = this.buildCalendarEvent(bookingData);
       
@@ -210,6 +226,7 @@ export class GoogleCalendarService {
   }
 
   async getEventsInRange(startDate: Date, endDate: Date): Promise<calendar_v3.Schema$Event[]> {
+    this.checkCredentials();
     try {
       const response = await this.executeWithRetry(
         () => this.calendar.events.list({
@@ -266,6 +283,7 @@ export class GoogleCalendarService {
   // Availability Checking
 
   async checkAvailability(startDate: Date, endDate: Date): Promise<boolean> {
+    this.checkCredentials();
     try {
       const events = await this.getEventsInRange(startDate, endDate);
       

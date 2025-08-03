@@ -11,7 +11,15 @@ const SyncRequestSchema = z.object({
   force: z.boolean().optional().default(false)
 });
 
-const syncService = new CalendarSyncService();
+// Lazy initialization to avoid build-time errors when env vars are missing
+let syncService: CalendarSyncService | null = null;
+
+function getSyncService(): CalendarSyncService {
+  if (!syncService) {
+    syncService = new CalendarSyncService();
+  }
+  return syncService;
+}
 
 /**
  * GET /api/admin/sync - Get sync status
@@ -28,7 +36,7 @@ export async function GET(request: NextRequest) {
     const eventId = searchParams.get('eventId');
 
     if (bookingId) {
-      const status = await syncService.getSyncStatus();
+      const status = await getSyncService().getSyncStatus();
       return NextResponse.json({ syncStatus: status });
     }
 
@@ -97,7 +105,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Trigger overall sync status check
-    const syncStatus = await syncService.getSyncStatus();
+    const syncStatus = await getSyncService().getSyncStatus();
     
     return NextResponse.json({
       success: true,
