@@ -4,24 +4,28 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getBusinessConfig } from '@/lib/config/business-config';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const config = getBusinessConfig();
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/castles", label: "Our Castles" },
+    { href: "/services", label: `Our ${config.services.terminology.charAt(0).toUpperCase() + config.services.terminology.slice(1)}` },
     { href: "/about", label: "About Us" },
     { href: "/health-and-safety", label: "Health & Safety" },
     { href: "/faq", label: "FAQ" },
     { href: "/contact", label: "Contact" },
   ];
 
+  const servicesLabel = `Our ${config.services.terminology.charAt(0).toUpperCase() + config.services.terminology.slice(1)}`;
+  
   const mobileBarLinks = navLinks.filter((link) =>
-    ["Home", "Our Castles", "Contact"].includes(link.label),
+    ["Home", servicesLabel, "Contact"].includes(link.label),
   );
   const mobileMenuLinks = navLinks.filter(
-    (link) => !["Home", "Our Castles", "Contact"].includes(link.label),
+    (link) => !["Home", servicesLabel, "Contact"].includes(link.label),
   );
 
   const handleMenuToggle = () => {

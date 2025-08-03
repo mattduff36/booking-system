@@ -8,11 +8,13 @@ import { MotionDiv } from "@/components/motion/MotionDiv";
 import { MotionH1 } from "@/components/motion/MotionH1";
 import { MotionP } from "@/components/motion/MotionP";
 import { Bubblegum_Sans } from "next/font/google";
+import { getBusinessConfig } from '@/lib/config/business-config';
 
 const bubblegumSans = Bubblegum_Sans({ subsets: ["latin"], weight: ["400"] });
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const config = getBusinessConfig();
   
   const images = [
     "/placeholder-hero-1.jpg",
@@ -94,7 +96,7 @@ const Hero = () => {
           animate={{ scale: 1, opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.4 }}
         >
-          The Best Bouncy Castles in Town!
+                      The Best {config.services.terminology.charAt(0).toUpperCase() + config.services.terminology.slice(1)} in Town!
         </MotionH1>
         <MotionP
           className="mt-4 max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto text-base sm:text-lg drop-shadow font-bold bg-white/20 rounded-2xl p-2 sm:p-4 backdrop-blur-sm border-2 border-white/30"
@@ -117,7 +119,7 @@ const Hero = () => {
             }}
           >
             <Button asChild size="lg" className="w-full sm:w-auto bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold text-lg px-8 py-4 rounded-full shadow-lg border-2 border-white/30">
-              <Link href="/castles">🏰 View Our Castles</Link>
+                                  <Link href="/services">🎯 View Our {config.services.terminology.charAt(0).toUpperCase() + config.services.terminology.slice(1)}</Link>
             </Button>
           </MotionDiv>
           <MotionDiv
