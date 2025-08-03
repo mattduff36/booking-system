@@ -140,48 +140,48 @@ export default function ServicesManagement() {
       });
 
       if (response.ok) {
-        toast.success(editingService ? \`\${config.services.terminology.charAt(0).toUpperCase() + config.services.terminology.slice(1)} updated successfully\` : \`\${config.services.terminology.charAt(0).toUpperCase() + config.services.terminology.slice(1)} added successfully\`);
+        toast.success(editingService ? `${config.services.terminology.charAt(0).toUpperCase() + config.services.terminology.slice(1)} updated successfully` : `${config.services.terminology.charAt(0).toUpperCase() + config.services.terminology.slice(1)} added successfully`);
         setIsModalOpen(false);
         fetchServices();
         resetForm();
       } else {
         const error = await response.text();
-        toast.error(\`Failed to save \${config.services.terminology}: \${error}\`);
+        toast.error(`Failed to save ${config.services.terminology}: ${error}`);
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      toast.error(\`Error saving \${config.services.terminology}\`);
+      toast.error(`Error saving ${config.services.terminology}`);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const handleDelete = async (id: number) => {
-    if (!confirm(\`Are you sure you want to delete this \${config.services.terminology}?\`)) {
+    if (!confirm(`Are you sure you want to delete this ${config.services.terminology}?`)) {
       return;
     }
 
     try {
       // Try services API first, fallback to fleet API
-      let response = await fetch(\`/api/admin/services/\${id}\`, {
+      let response = await fetch(`/api/admin/services/${id}`, {
         method: 'DELETE',
       });
       
       if (!response.ok) {
-        response = await fetch(\`/api/admin/fleet/\${id}\`, {
+        response = await fetch(`/api/admin/fleet/${id}`, {
           method: 'DELETE',
         });
       }
 
       if (response.ok) {
-        toast.success(\`\${config.services.terminology.charAt(0).toUpperCase() + config.services.terminology.slice(1)} deleted successfully\`);
+        toast.success(`${config.services.terminology.charAt(0).toUpperCase() + config.services.terminology.slice(1)} deleted successfully`);
         fetchServices();
       } else {
-        toast.error(\`Failed to delete \${config.services.terminology}\`);
+        toast.error(`Failed to delete ${config.services.terminology}`);
       }
     } catch (error) {
       console.error('Error deleting service:', error);
-      toast.error(\`Error deleting \${config.services.terminology}\`);
+      toast.error(`Error deleting ${config.services.terminology}`);
     }
   };
 
