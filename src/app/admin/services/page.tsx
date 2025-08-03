@@ -222,7 +222,12 @@ export default function ServicesManagement() {
 
     setIsGeneratingDescription(true);
     try {
-      const description = await generateCastleDescription(formData.name, formData.category, formData.size, formData.price);
+      const description = generateCastleDescription({ 
+        name: formData.name, 
+        theme: formData.category, 
+        size: formData.size, 
+        price: formData.price 
+      });
       setFormData(prev => ({ ...prev, description }));
       toast.success('Description generated successfully!');
     } catch (error) {
