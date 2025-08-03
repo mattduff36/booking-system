@@ -28,7 +28,7 @@ import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { generateCastleDescription, generateAlternativeDescription } from '@/lib/utils/description-generator';
 import { toast } from 'sonner';
-import { getBusinessConfig } from '@/lib/config/business-config';
+import { useBusinessConfig } from '@/hooks/useBusinessConfig';
 
 interface Service {
   id: number;
@@ -61,7 +61,7 @@ interface MaintenanceForm {
 }
 
 export default function ServicesManagement() {
-  const config = getBusinessConfig();
+  const { config } = useBusinessConfig();
   const [services, setServices] = useState<Service[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);

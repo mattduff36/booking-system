@@ -8,13 +8,13 @@ import { MotionDiv } from "@/components/motion/MotionDiv";
 import { MotionH1 } from "@/components/motion/MotionH1";
 import { MotionP } from "@/components/motion/MotionP";
 import { Bubblegum_Sans } from "next/font/google";
-import { getBusinessConfig } from '@/lib/config/business-config';
+import { useBusinessConfig } from '@/hooks/useBusinessConfig';
 
 const bubblegumSans = Bubblegum_Sans({ subsets: ["latin"], weight: ["400"] });
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const config = getBusinessConfig();
+  const { config } = useBusinessConfig();
   
   const images = [
     "/placeholder-hero-1.jpg",

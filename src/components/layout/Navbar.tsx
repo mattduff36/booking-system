@@ -4,11 +4,11 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getBusinessConfig } from '@/lib/config/business-config';
+import { useBusinessConfig } from '@/hooks/useBusinessConfig';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const config = getBusinessConfig();
+  const { config } = useBusinessConfig();
 
   const navLinks = [
     { href: "/", label: "Home" },
