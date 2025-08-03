@@ -1,5 +1,5 @@
 import { Phone, Mail, Award, Smile, ShieldCheck } from "lucide-react";
-import { getBusinessConfig } from '@/lib/config/business-config';
+import { useBusinessConfig } from '@/hooks/useBusinessConfig';
 
 const features = [
   {
@@ -20,7 +20,7 @@ const features = [
 ];
 
 const Introduction = () => {
-  const config = getBusinessConfig();
+  const { config } = useBusinessConfig();
   
   return (
     <section className="container mx-auto my-12 rounded-3xl border-4 border-pink-300 bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-100 p-8 shadow-2xl backdrop-blur-sm transform hover:scale-105 transition-all duration-300">

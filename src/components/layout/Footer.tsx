@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { Heart, Facebook } from "lucide-react";
-import { getBusinessConfig } from '@/lib/config/business-config';
+import { useBusinessConfig } from '@/hooks/useBusinessConfig';
 
 const Footer = () => {
-  const config = getBusinessConfig();
+  const { config } = useBusinessConfig();
   
   return (
     <footer className="bg-gray-50 text-gray-600 border-t border-gray-200">
