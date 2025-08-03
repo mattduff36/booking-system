@@ -195,7 +195,7 @@ export function BookingErrorBoundary({ children }: { children: ReactNode }) {
               <AlertTriangle className="h-8 w-8 text-red-600 mx-auto" />
               <CardTitle className="mt-4">Booking System Error</CardTitle>
               <CardDescription>
-                We're having trouble with the booking system. Please try again or contact us directly.
+                We&apos;re having trouble with the booking system. Please try again or contact us directly.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">

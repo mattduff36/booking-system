@@ -53,10 +53,10 @@ function HireAgreementSuccessContent() {
             <div className="bg-blue-50 p-4 rounded-lg">
               <h3 className="font-semibold text-gray-900 mb-2">What happens next?</h3>
               <ul className="text-sm text-gray-700 space-y-1 text-left">
-                <li>• We'll contact you within 24 hours to confirm delivery details</li>
+                <li>• We&apos;ll contact you within 24 hours to confirm delivery details</li>
                 <li>• Your castle will be delivered on the agreed date</li>
                 <li>• Payment will be collected upon delivery</li>
-                <li>• We'll provide safety instructions and setup on the day</li>
+                <li>• We&apos;ll provide safety instructions and setup on the day</li>
               </ul>
             </div>
 

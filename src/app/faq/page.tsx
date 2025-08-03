@@ -48,7 +48,7 @@ const FAQPage = () => {
               ❓ Frequently Asked Questions
             </h1>
             <p className="max-w-2xl mx-auto text-lg text-gray-800 font-bold bg-white/30 rounded-2xl p-4 shadow-md border-2 border-white/30">
-              Have a question? We've got answers. If you can't find what you're looking for, feel free to contact us directly.
+              Have a question? We&apos;ve got answers. If you can&apos;t find what you&apos;re looking for, feel free to contact us directly.
             </p>
           </div>
 

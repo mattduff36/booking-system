@@ -11,7 +11,7 @@ const ContactPage = () => {
                             📧 Get In Touch 📞
                         </h1>
                         <p className="max-w-2xl mx-auto text-lg text-gray-700 font-semibold bg-white/60 rounded-2xl p-4 shadow-lg border-2 border-green-300">
-                            🎉 We're here to help you plan the perfect event. Reach out to us with any questions or to book your bouncy castle today! 🎉
+                            🎉 We&apos;re here to help you plan the perfect event. Reach out to us with any questions or to book your bouncy castle today! 🎉
                         </p>
                     </div>
 

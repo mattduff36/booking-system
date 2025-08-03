@@ -534,7 +534,7 @@ export default function DebugPage() {
                             </h3>
                             <div className="text-sm text-red-700 space-y-1">
                               <p>• This section allows direct database editing</p>
-                              <p>• Changes are applied immediately when you click "Update Database"</p>
+                              <p>• Changes are applied immediately when you click &quot;Update Database&quot;</p>
                               <p>• Always backup your data before making changes</p>
                               <p>• Invalid JSON will be ignored</p>
                               <p>• Use this feature only for emergency fixes</p>

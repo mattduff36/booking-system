@@ -28,7 +28,7 @@ const Hero = () => {
     }, 5000); // Change image every 5 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <section className="relative h-[80vh] w-full flex items-center justify-center text-white">

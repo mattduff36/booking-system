@@ -98,7 +98,7 @@ const AboutPage = () => {
                     🚚 Delivery Information 📦
                   </h2>
                   <p className="text-lg text-gray-700 text-center font-semibold bg-white/60 rounded-2xl p-4 shadow-lg mb-6">
-                    We are proud to serve Edwinstowe and the surrounding areas. Here's how our delivery works:
+                    We are proud to serve Edwinstowe and the surrounding areas. Here&apos;s how our delivery works:
                   </p>
                   <dl className="mt-8 space-y-4">
                     <div className="flex items-start bg-white/80 rounded-2xl p-6 shadow-lg border-2 border-blue-300 transform hover:scale-105 transition-all duration-300">
@@ -141,7 +141,7 @@ const AboutPage = () => {
                   🗺️ Our Service Area 📍
                 </h3>
                 <p className="text-lg text-gray-700 font-semibold">
-                  We proudly serve Edwinstowe and the surrounding areas, including Mansfield, Ollerton, and Worksop. If you're unsure whether we cover your location, please don't hesitate to get in touch!
+                  We proudly serve Edwinstowe and the surrounding areas, including Mansfield, Ollerton, and Worksop. If you&apos;re unsure whether we cover your location, please don&apos;t hesitate to get in touch!
                 </p>
               </div>
               <div className="relative h-80 w-full rounded-3xl shadow-2xl overflow-hidden border-4 border-indigo-300">

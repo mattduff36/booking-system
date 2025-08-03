@@ -145,7 +145,7 @@ export function BookingForm() {
           </div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Booking Request Submitted!</h2>
           <p className="text-gray-600 mb-6">
-            Thank you for your booking request. We'll contact you within 24 hours to confirm your booking and arrange payment.
+            Thank you for your booking request. We&apos;ll contact you within 24 hours to confirm your booking and arrange payment.
           </p>
           <Button 
             onClick={() => window.location.reload()} 
@@ -368,7 +368,7 @@ export function BookingForm() {
         </Button>
 
         <p className="text-xs text-gray-600 text-center">
-          * Required fields. We'll contact you within 24 hours to confirm your booking.
+          * Required fields. We&apos;ll contact you within 24 hours to confirm your booking.
         </p>
       </form>
     </div>

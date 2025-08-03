@@ -31,15 +31,7 @@ function HireAgreementContent() {
   const [hasAgreed, setHasAgreed] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  useEffect(() => {
-    if (bookingRef) {
-      fetchBookingDetails();
-    } else {
-      setIsLoading(false);
-    }
-  }, [bookingRef]);
-
-    const fetchBookingDetails = async () => {
+  const fetchBookingDetails = async () => {
     try {
       const response = await fetch(`/api/bookings/${bookingRef}`);
       if (response.ok) {
@@ -70,6 +62,14 @@ function HireAgreementContent() {
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (bookingRef) {
+      fetchBookingDetails();
+    } else {
+      setIsLoading(false);
+    }
+  }, [bookingRef]);
 
   const handleSubmitAgreement = async () => {
     if (!hasAgreed || !bookingDetails) {
@@ -177,7 +177,7 @@ function HireAgreementContent() {
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="text-sm text-gray-700 mb-6">
-              <p>This Hire Agreement ("Agreement") is between T&S Bouncy Castle Hire ("Company") and the individual or organization hiring the equipment ("Hirer"). By signing, the Hirer agrees to the following terms and conditions.</p>
+              <p>This Hire Agreement (&quot;Agreement&quot;) is between T&S Bouncy Castle Hire (&quot;Company&quot;) and the individual or organization hiring the equipment (&quot;Hirer&quot;). By signing, the Hirer agrees to the following terms and conditions.</p>
             </div>
 
             {/* Point 1 */}
@@ -211,7 +211,7 @@ function HireAgreementContent() {
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">4. Use & Safety Instructions</h3>
               <ul className="list-disc list-inside space-y-1 text-sm text-gray-700 ml-4">
-                <li>Inflatables must be secured to the ground per manufacturer's instructions on a level, debris‑free surface.</li>
+                <li>Inflatables must be secured to the ground per manufacturer&apos;s instructions on a level, debris‑free surface.</li>
                 <li>A responsible adult (17+) must supervise at all times; do not allow adults and children to use simultaneously except for assisting.</li>
                 <li>No shoes, glasses, jewellery, badges, food, drink, gum, pets, toys or sharp objects on or near the equipment.</li>
                 <li>No somersaults, climbing, hanging on walls, or bouncing on the front step.</li>

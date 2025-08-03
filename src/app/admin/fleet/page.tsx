@@ -525,7 +525,7 @@ export default function FleetManagement() {
                     placeholder="Enter a description or use the Generate button to auto-create one based on the castle details above..."
                   />
                   <p className="text-xs text-gray-500 mt-1">
-                    💡 Tip: Fill in the castle name, theme, size, and price first, then click "Generate" for an automatic description!
+                    💡 Tip: Fill in the castle name, theme, size, and price first, then click &quot;Generate&quot; for an automatic description!
                   </p>
                 </div>
 

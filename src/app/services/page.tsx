@@ -111,7 +111,7 @@ const CastlesPage = async () => {
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">Premium Bouncy Castle Hire in Edwinstowe</h2>
                 <p className="text-gray-700 mb-4">
                   At T&S Bouncy Castle Hire, we provide a wide range of high-quality, fully insured bouncy castles 
-                  perfect for children's birthday parties, family gatherings, school events, and corporate functions 
+                  perfect for children&apos;s birthday parties, family gatherings, school events, and corporate functions 
                   throughout Edwinstowe, Mansfield, Newark, Worksop, Ollerton, Nottingham, Bilsthorpe, and the wider Nottinghamshire area.
                 </p>
                 <p className="text-gray-700">

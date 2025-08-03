@@ -36,7 +36,7 @@ export default function AdminSettings() {
               Settings Page Under Development
             </h3>
             <p className="text-gray-600 mb-4">
-              We're working on bringing you comprehensive admin settings and configuration options.
+              We&apos;re working on bringing you comprehensive admin settings and configuration options.
             </p>
             <p className="text-sm text-gray-500">
               In the meantime, all fleet and maintenance management features are available in the Fleet tab.

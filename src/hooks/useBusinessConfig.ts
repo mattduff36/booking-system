@@ -38,13 +38,22 @@ const DEFAULT_CONFIG: BusinessConfig = {
   branding: {
     primaryColor: "#3b82f6",
     secondaryColor: "#1e40af",
-    logoPath: "/logo.png"
+    accentColor: "#10b981",
+    logoPath: "/logo.png",
+    faviconPath: "/favicon.ico"
   },
   seo: {
     metaTitle: "Your Business Name - Professional Services",
     metaDescription: "Professional service provider offering quality solutions for your needs",
-    keywords: ["services", "professional", "local business"],
+    keywords: "services, professional, local business",
     ogImage: "/og-image.jpg"
+  },
+  features: {
+    bookingSystem: true,
+    onlinePayments: false,
+    calendarIntegration: false,
+    emailNotifications: true,
+    adminPanel: true
   }
 };
 

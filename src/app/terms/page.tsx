@@ -35,7 +35,7 @@ const TermsPage = () => {
               </div>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  These terms and conditions ("Terms") govern your use of the {config.business.name} website and services. 
+                  These terms and conditions (&quot;Terms&quot;) govern your use of the {config.business.name} website and services. 
                   By accessing our website or using our services, you agree to be bound by these Terms.
                 </p>
                 <p>
@@ -103,7 +103,7 @@ const TermsPage = () => {
                   <li>Children and adults should not use simultaneously except for assistance</li>
                   <li>Stop use if surface becomes wet or in rain; evacuate immediately if blower fails</li>
                   <li>No use by persons under the influence of alcohol, drugs, or with medical conditions aggravated by physical activity</li>
-                  <li>Equipment must be secured to the ground per manufacturer's instructions on a level, debris-free surface</li>
+                  <li>Equipment must be secured to the ground per manufacturer&apos;s instructions on a level, debris-free surface</li>
                 </ul>
               </div>
             </div>
@@ -134,7 +134,7 @@ const TermsPage = () => {
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Use the website for lawful purposes only</li>
                   <li>Not attempt to gain unauthorized access to our systems</li>
-                  <li>Not interfere with the website's functionality</li>
+                  <li>Not interfere with the website&apos;s functionality</li>
                   <li>Provide accurate information when making bookings</li>
                   <li>Respect our intellectual property rights</li>
                 </ul>
