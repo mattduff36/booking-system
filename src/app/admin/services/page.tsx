@@ -121,7 +121,7 @@ export default function ServicesManagement() {
       
       // If services API doesn't exist, fallback to fleet API
       if (editingService) {
-        url = \`/api/admin/fleet/\${editingService.id}\`;
+        url = `/api/admin/fleet/${editingService.id}`;
         method = 'PUT';
       } else {
         // Try services API first, fallback to fleet
