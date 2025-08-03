@@ -21,7 +21,7 @@ import {
   Bug
 } from 'lucide-react';
 import { useState } from 'react';
-import { getBusinessConfig } from '@/lib/config/business-config';
+import { useBusinessConfig } from '@/hooks/useBusinessConfig';
 
 interface AdminLayoutProps {
   children: ReactNode;
@@ -80,7 +80,7 @@ function AdminAuthWrapper({ children }: { children: ReactNode }) {
 function AdminNavigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { data: session } = useSession();
-  const config = getBusinessConfig();
+  const { config } = useBusinessConfig();
 
   const navigation = [
     { name: 'Dashboard', href: '/admin', icon: Home },
